@@ -49,11 +49,6 @@ class memcached	(
 
 	validate_absolute_path($logfile)
 
-	if defined(Class['ntteam'])
-	{
-		ntteam::tag{ 'memcached': }
-	}
-
 	package { $memcached::params::package_name:
 		ensure => $ensure,
 	}
