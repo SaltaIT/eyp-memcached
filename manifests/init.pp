@@ -8,8 +8,8 @@ class memcached (
                   $logfile         = '/var/log/memcached.log',
                   $error_on_oom    = false,
                   $threads         = $::processorcount,
-									$verbose_level   = '0',
-									$memory_lockdown = false,
+                  $verbose_level   = '0',
+                  $memory_lockdown = false,
                 ) inherits params {
 
   validate_absolute_path($logfile)
@@ -23,7 +23,7 @@ class memcached (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template("memcached/${conftemplate}"),
+    content => template("${module_name}/${memcached::params::conftemplate}"),
     require => Package[$memcached::params::package_name],
     notify  => Service[$memcached::params::servicename],
   }

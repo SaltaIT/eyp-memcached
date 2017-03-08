@@ -8,9 +8,9 @@ class memcached::params {
       {
         /^6.*$/:
         {
-          fail("TODO!")
+          fail('TODO!')
         }
-        default: { fail("Unsupported RHEL/CentOS version! - $::operatingsystemrelease")  }
+        default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
     }
     'Debian':
@@ -29,13 +29,13 @@ class memcached::params {
               $conf='/etc/memcached.conf'
               $servicename='memcached'
             }
-            default: { fail("Unsupported Ubuntu version! - $::operatingsystemrelease")  }
+            default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
         }
-        'Debian': { fail("Unsupported")  }
-        default: { fail("Unsupported Debian flavour!")  }
+        'Debian': { fail('Unsupported')  }
+        default: { fail('Unsupported Debian flavour!')  }
       }
     }
-    default: { fail("Unsupported OS!")  }
+    default: { fail('Unsupported OS!')  }
   }
 }
