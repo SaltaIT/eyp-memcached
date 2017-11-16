@@ -29,7 +29,7 @@ class memcached::params {
             {
               $package_name='memcached'
               $default_user='memcache'
-              $conftemplate='debian/memcachedconf.erb'
+              $conftemplate='debian/memcached.erb'
               $conf='/etc/memcached.conf'
               $servicename='memcached'
             }
