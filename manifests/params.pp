@@ -6,7 +6,7 @@ class memcached::params {
     {
       case $::operatingsystemrelease
       {
-        /^6.*$/:
+        /^7.*$/:
         {
           fail('TODO!')
         }
