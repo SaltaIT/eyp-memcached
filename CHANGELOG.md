@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.4
+
+* added support for CentOS 7
+
 ## 0.1.3
 
 * verbose_level >=2 sets verbose to -vv

@@ -1,0 +1,19 @@
+# puppet managed file
+
+PORT="<%= @port %>"
+USER="<%= @user %>"
+MAXCONN="<%= @maxcon %>"
+CACHESIZE="<%= @maxmem %>"
+OPTIONS="<% -%>
+<% case @verbose_level -%>
+<% when "0" -%>
+<% when "1" -%>
+ -v <% -%>
+<% else -%>
+ -vv <% -%>
+<% end -%>
+ -l <%= @listen -%>
+ -t <%= @threads -%>
+<% if @memory_lockdown %> -k <% end -%>
+<% if @error_on_oom -%> -M <% end -%>
+"

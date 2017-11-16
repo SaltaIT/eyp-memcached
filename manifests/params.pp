@@ -8,7 +8,11 @@ class memcached::params {
       {
         /^7.*$/:
         {
-          fail('TODO!')
+          $package_name='memcached'
+          $default_user='memcached'
+          $conftemplate='rh/memcached.erb'
+          $conf='/etc/sysconfig/memcached'
+          $servicename='memcached'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -25,7 +29,7 @@ class memcached::params {
             {
               $package_name='memcached'
               $default_user='memcache'
-              $conftemplate='memcachedconf.erb'
+              $conftemplate='debian/memcachedconf.erb'
               $conf='/etc/memcached.conf'
               $servicename='memcached'
             }
