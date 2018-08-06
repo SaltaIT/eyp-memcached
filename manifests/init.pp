@@ -10,7 +10,7 @@ class memcached (
                   $threads         = $::processorcount,
                   $verbose_level   = '0',
                   $memory_lockdown = false,
-                ) inherits params {
+                ) inherits memcached::params {
 
   validate_absolute_path($logfile)
 
