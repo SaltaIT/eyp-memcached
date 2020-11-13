@@ -1,7 +1,7 @@
 {
   "name": "eyp-memcached",
   "version": "0.1.4",
-  "author": "eyp",
+  "author": "Jordi Prats",
   "summary": "manages a single instance memcached",
   "license": "Apache-2.0",
   "source": "https://github.com/SaltaIT/eyp-memcached",
